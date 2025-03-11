@@ -19,11 +19,11 @@ Sistema para calcular automaticamente as horas trabalhadas em excesso ou em déb
 | Aspecto | Descrição |
 | - | - |
 | **Foto de Perfil** | <img src="aux_counting_hours/img00.jfif" alt="Imagem da Persona" width="150" height="150"> |
-| **Nome** | |
-| **Idade** | |
-| **Cargo** | |
-| **Empresa** | |
-| **Responsabilidades** | |
-| **Desafios** | |
-| **Objetivos** | |
-| **Soluções Esperadas** | |
+| **Nome** | Maria Andrade |
+| **Idade** | 27 |
+| **Cargo** | Head de Operações |
+| **Empresa** | Lucro+ |
+| **Responsabilidades** | Gerenciar a operação e eficiência dos processos internos, especialmente o controle de horas e produtividade dos colaboradores. |
+| **Desafios** | Precisa de uma solução eficiente para supervisionar as horas de trabalho dos colaboradores, assegurando que todos cumpram suas jornadas e identificando de forma prática horas extras e devedoras. |
+| **Objetivos** | Melhorar a precisão e o controle do ponto eletrônico, reduzir erros manuais e gerar relatórios detalhados para tomadas de decisão mais rápidas. |
+| **Soluções Esperadas** | Um sistema que calcule automaticamente as horas trabalhadas, visualize colaboradores que merecem bonificações, e permita exportar dados para reuniões e feedbacks. |
