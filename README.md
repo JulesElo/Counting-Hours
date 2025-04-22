@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Skip to content
 Navigation Menu
 JulesElo
@@ -17,6 +18,25 @@ Counting-Hours
 README.md
 in
 main
+=======
+<div align="center">
+  <img src="https://img.icons8.com/fluency/64/time-machine.png" alt="Clock Icon" />
+  <h1><strong>Counting Hours</strong></h1>
+  <p><em>Automatize o controle de horas trabalhadas e otimize a produtividade com precisão.</em></p>
+</div>
+
+---
+
+## 🚀 VISÃO GERAL
+
+Plataforma inteligente para controle de **horas extras** e **débito de jornada**, baseada nos registros de ponto dos colaboradores.
+
+**Objetivo estratégico:** fornecer aos gestores uma ferramenta robusta para supervisão, correção de inconsistências e controle total da carga horária.
+
+---
+
+## 🔍 LEAN INCEPTION
+>>>>>>> 892160218730b9128d2d427be11dec879dc5961c
 
 Edit
 
@@ -174,8 +194,37 @@ Sistema para calcular automaticamente as horas **trabalhadas em excesso** ou **e
 
 ---
 
+---
 
+<<<<<<< HEAD
 Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
 Nenhum arquivo escolhido
 Attach files by dragging & dropping, selecting or pasting them.
 Editing Counting-Hours/README.md at main · JulesElo/Counting-Hours
+=======
+## 👤 PERSONA PROFISSIONAL
+
+<div align="left" style="margin: 20px 0;">
+  <img src="aux_counting_hours/img00.jfif" alt="Imagem da Persona" width="100" height="100" style="border-radius: 10px; border: 2px solid #ddd; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);" />
+</div>
+
+
+| **Aspecto**               | **Descrição**                                                                                                                                                 |
+|---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Nome**                   | Maria Andrade                                                                                                                                                 |
+| **Idade**                  | 27                                                                                                                                                             |
+| **Cargo**                  | Head de Operações                                                                                                                                              |
+| **Empresa**                | Lucro+                                                                                                                                                         |
+| **Responsabilidades**      | Gerenciar a operação e eficiência dos processos internos, especialmente o controle de horas e produtividade dos colaboradores.                                 |
+| **Desafios**               | Precisa de uma solução eficiente para supervisionar as horas de trabalho dos colaboradores, assegurando que todos cumpram suas jornadas e identificando de forma prática horas extras e devedoras. |
+| **Objetivos**              | Melhorar a precisão e o controle do ponto eletrônico, reduzir erros manuais e gerar relatórios detalhados para tomadas de decisão mais rápidas.                  |
+| **Soluções Esperadas**     | Um sistema que calcule automaticamente as horas trabalhadas, visualize colaboradores que merecem bonificações, e permita exportar dados para reuniões e feedbacks. |
+
+---
+
+## 📈 DIFERENCIAIS DO SISTEMA
+
+- Relatórios visuais de produtividade.
+- Alertas automáticos para excesso ou débito de horas.
+- Compatível com exportações periódicas para reuniões.
+>>>>>>> 892160218730b9128d2d427be11dec879dc5961c
