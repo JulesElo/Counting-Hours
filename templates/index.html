@@ -553,9 +553,120 @@
       .dashboard-view {
         padding-top: 20px;
       }
+      /* Adicione este CSS dentro da sua tag <style> existente */
+
+      /* Responsividade */
+      @media (max-width: 1024px) {
+        .sidebar-toggle {
+          display: flex;
+        }
+
+        .sidebar-container {
+          transform: translateX(-100%);
+          transition: transform 0.3s ease;
+        }
+
+        .sidebar-container.active {
+          transform: translateX(0);
+        }
+
+        .content {
+          margin-left: 0;
+          padding: 15px;
+        }
+
+        .project-title {
+          font-size: 1.8rem;
+          margin-top: 40px;
+        }
+
+        .clock {
+          width: 200px;
+          height: 200px;
+        }
+
+        .hour-hand {
+          height: 50px;
+        }
+
+        .minute-hand {
+          height: 70px;
+        }
+
+        .second-hand {
+          height: 80px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .stat-cards {
+          grid-template-columns: 1fr;
+        }
+
+        .footer {
+          flex-direction: column;
+          text-align: center;
+          gap: 10px;
+        }
+
+        .copyright {
+          justify-content: center;
+        }
+
+        .clock-container {
+          padding-top: 60px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .project-title {
+          font-size: 1.5rem;
+        }
+
+        .subtitle {
+          font-size: 0.9rem;
+        }
+
+        .clock {
+          width: 180px;
+          height: 180px;
+        }
+
+        .hour-hand {
+          height: 40px;
+        }
+
+        .minute-hand {
+          height: 60px;
+        }
+
+        .second-hand {
+          height: 70px;
+        }
+
+        .content {
+          padding: 10px;
+        }
+      }
+
+      /* Modo sidebar expandido para dispositivos móveis */
+      @media (max-width: 1024px) {
+        .sidebar-container.active .sidebar {
+          width: 260px;
+        }
+
+        .sidebar-container.active .menu-item span,
+        .sidebar-container.active .submenu-item span,
+        .sidebar-container.active .logo-text,
+        .sidebar-container.active .submenu-indicator {
+          opacity: 1;
+        }
+      }
     </style>
   </head>
   <body>
+    <!-- Coloque exatamente como primeira linha após <body> -->
+    <div class="sidebar-toggle" id="sidebarToggle">☰</div>
     <div class="sidebar-container">
       <div class="sidebar">
         <div class="sidebar-header">
@@ -796,6 +907,57 @@
             .querySelector(".clock-container")
             .classList.remove("dashboard-view");
         });
+      });
+
+      // Botão para abrir/fechar sidebar em dispositivos móveis
+      document
+        .getElementById("sidebarToggle")
+        .addEventListener("click", function () {
+          document
+            .getElementById("sidebarContainer")
+            .classList.toggle("active");
+        });
+
+      // Fechar sidebar ao clicar em qualquer item do menu em dispositivos móveis
+      document.querySelectorAll(".menu-item, .submenu-item").forEach((item) => {
+        item.addEventListener("click", function () {
+          if (window.innerWidth <= 1024) {
+            document
+              .getElementById("sidebarContainer")
+              .classList.remove("active");
+          }
+        });
+      });
+
+      // Verificar tamanho da tela e ajustar layout conforme necessário
+      function checkScreenSize() {
+        if (window.innerWidth <= 1024) {
+          document
+            .getElementById("sidebarContainer")
+            .classList.remove("active");
+          document.querySelector(".content").style.marginLeft = "0";
+        } else {
+          document.querySelector(".content").style.marginLeft = "80px";
+        }
+      }
+
+      // Verificar no carregamento inicial e ao redimensionar
+      window.addEventListener("load", checkScreenSize);
+      window.addEventListener("resize", checkScreenSize);
+
+      // Fechar sidebar ao tocar fora dela em dispositivos móveis
+      document.addEventListener("click", function (event) {
+        const sidebar = document.getElementById("sidebarContainer");
+        const sidebarToggle = document.getElementById("sidebarToggle");
+
+        if (
+          window.innerWidth <= 1024 &&
+          !sidebar.contains(event.target) &&
+          !sidebarToggle.contains(event.target) &&
+          sidebar.classList.contains("active")
+        ) {
+          sidebar.classList.remove("active");
+        }
       });
     </script>
   </body>
