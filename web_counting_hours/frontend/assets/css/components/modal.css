@@ -1,0 +1,143 @@
+/*
+ * frontend/assets/css/components/modal.css
+ * Descrição: Estilos para o botão de adicionar funcionários e o modal.
+ */
+
+/* ==========================================================================
+    BOTÃO DE ADICIONAR FUNCIONÁRIOS
+    ========================================================================== */
+
+/* Estilos para o botão Adicionar Funcionário */
+#add-employee-button {
+    display: none; /* Inicialmente oculto */
+    position: absolute; /* Para posicionar relativamente ao main-content */
+    bottom: 20px; /* Distância da parte inferior */
+    right: 20px; /* Distância da parte direita */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #1B1C1E; /* Cor do fundo da página */
+    color: #BFBFBF; /* Cor do texto para um cinza claro */
+    /* border: 2px solid #3E4042; Adiciona uma borda sutil para separação */
+    border: none;
+    border-radius: 20px; /* Formato de pílula (metade da altura + um pouco mais) */
+    cursor: pointer; /* Indica que é clicável */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+    z-index: 10; /* Garante que fique acima de outros elementos */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra para o efeito flutuante */
+    overflow: hidden; /* Importante para que a borda animada não vaze */
+}
+
+#add-employee-button:hover {
+    background:linear-gradient(to right, #ff8c00, #ff0080); /* Cor de fundo gradiente no hover */
+    color: white; /* Cor do texto branco no hover (melhor contraste com o gradiente) */
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5); /* Sombra mais intensa no hover */
+}
+
+#add-employee-button i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    color: #BFBFBF; /* Define a cor do ícone para um cinza claro */
+}
+
+#add-employee-button:hover i {
+    color: white; /* Cor do ícone branco no hover */
+}
+
+/* ==========================================================================
+    MODAL DE ADICIONAR FUNCIONÁRIO
+    ========================================================================== */
+
+/* Estilos para o Modal de Adicionar Funcionário */
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Fica fixo na tela */
+    z-index: 100; /* Garante que fique acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total da tela */
+    height: 100%; /* Altura total da tela */
+    overflow: auto; /* Habilita a rolagem se o conteúdo for muito grande */
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo preto com 40% de opacidade para o efeito de sobreposição */
+}
+
+.modal-content {
+    background-color: rgba(27, 28, 30, 0.8);
+    /* margin: 15% auto; /* Centraliza verticalmente e horizontalmente */
+    margin: 2% auto; /* Reduz a margem superior para centralizar mais ao meio */
+    padding: 20px;
+    /* border: 1px solid #BFBFBF; */
+    width: 40%; /* Largura do conteúdo do modal */
+    border-radius: 8px;
+    position: relative; /* Para posicionar o botão de fechar */
+    color: #BFBFBF; /* Cor do texto dentro do modal */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19); /* Adiciona uma sombra sutil */
+}
+
+.close-button {
+    color: #BFBFBF;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    /* Aplica um gradiente linear horizontal ao texto */
+    background: linear-gradient(to right, #ff8c00, #ff0080); /* Define as cores do gradiente (laranja para rosa) */
+    -webkit-background-clip: text; /* Recorta o fundo para o formato do texto (para navegadores WebKit) */
+    background-clip: text; /* Recorta o fundo para o formato do texto (padrão CSS) */
+    color: transparent; /* Torna a cor do texto transparente para que o gradiente do fundo seja visível */
+    text-decoration: none;
+}
+
+#add-employee-form label {
+    display: block; /* Faz com que cada label ocupe uma linha inteira */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#add-employee-form input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding e a borda não aumentem a largura total */
+}
+
+#add-employee-form button[type=submit],
+#add-employee-form button[type=button].cancel-button {
+    background-color: #1B1C1E;
+    /* background-color: #5cb85c; /* Cor verde para o botão Salvar */
+    color: #BFBFBF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+}
+
+#add-employee-form button[type=submit]:hover,
+#add-employee-form button[type=submit]:focus {
+    background-color: #5cb85c;
+    color: white;
+}
+
+#add-employee-form button[type=button].cancel-button:hover,
+#add-employee-form button[type=button].cancel-button:focus {
+    background-color: #d9534f;
+    color: white;
+}
+
+#add-employee-form button[type=button].cancel-button {
+    /* background-color: #d9534f; /* Cor vermelha para o botão Cancelar */
+    margin-left: 10px;
+}
+
+#add-employee-form button:hover {
+    opacity: 0.8;
+}
