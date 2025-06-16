@@ -23,12 +23,12 @@ sdist/
 Thumbs.db
 
 # Frontend-specific ignores
-Web_Counting_Hours/frontend/uploads/  # Ignorar a pasta de uploads do frontend
+web_counting_hours/frontend/uploads/  # Ignorar a pasta de uploads do frontend
 
 # Backend-specific ignores
-Web_Counting_Hours/backend/uploads/  # Ignorar a pasta de uploads do backend
-Web_Counting_Hours/backend/data/*.db* # Ignorar arquivos de banco de dados SQLite temporários
-Web_Counting_Hours/backend/__pycache__/ # Já listado acima, mas para reforçar
+web_counting_hours/backend/uploads/  # Ignorar a pasta de uploads do backend
+web_counting_hours/backend/data/
+web_counting_hours/backend/__pycache__/ # Já listado acima, mas para reforçar
 
 # IDE specific
 .idea/

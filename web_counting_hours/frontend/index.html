@@ -103,6 +103,45 @@
         </div>
     </div>
 
+    <!-- Modal para Importar CSV -->
+    <div id="import-csv-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Importar CSV de Pontos</h2>
+            <form id="import-csv-form">
+                <!-- Seletor de arquivo CSV -->
+                <label for="csv_file">Arquivo CSV:</label>
+                <input type="file" id="csv_file" name="csv_file" accept=".csv"><br><br>
+
+                <!-- Selecionar funcionário -->
+                <label for="employee-select">Selecionar Funcionário:</label>
+                <select id="employee-select" name="employee-select">
+                    <option value="">Selecione...</option>
+                    <!-- opções adicionadas via JS -->
+                </select><br><br>
+
+                <!-- Campos automáticos -->
+                <label for="employee-name">Nome:</label>
+                <input type="text" id="employee-name" disabled><br><br>
+
+                <label for="employee-cpf">CPF:</label>
+                <input type="text" id="employee-cpf" disabled><br><br>
+
+                <label for="employee-hours">Carga Horária:</label>
+                <input type="text" id="employee-hours" disabled><br><br>
+
+                <!-- Datas -->
+                <label for="start-date">Data Início:</label>
+                <input type="date" id="start-date" name="start-date"><br><br>
+
+                <label for="end-date">Data Final:</label>
+                <input type="date" id="end-date" name="end-date"><br><br>
+
+                <button type="submit">Download</button>
+            </form>
+        </div>
+    </div>
+
     <!-- Inclusão do arquivo JavaScript -->
     <script src="assets/js/components/sidebar.js"></script>
     <script src="assets/js/components/clock.js"></script>
@@ -110,5 +149,6 @@
     <script src="assets/js/components/employees.js"></script>
     <script src="assets/js/components/modal.js"></script>
     <script type="module" src="assets/js/main.js"></script>
+    <script src="assets/js/components/importCSVModal.js"></script>
 </body>
 </html>
